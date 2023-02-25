@@ -15,7 +15,8 @@ public class Term
    */
    public Term(double coefficient, int power)
    {
-      // TODO: your code here
+      this.coefficient = coefficient;
+      this.power = power;
    }
 
    /**
@@ -23,7 +24,7 @@ public class Term
    */
    public double getCoefficient()
    {
-     // TODO: your code here
+      return this.coefficient;
    }
 
    /**
@@ -31,7 +32,7 @@ public class Term
    */
    public int getPower()
    {
-      // TODO: your code here
+      return this.power;
    }
 
    /**
@@ -41,7 +42,8 @@ public class Term
    */
    public Term multiply(Term t)
    {
-      // TODO: your code here
+      // TODO: Come back and check if you need to add power
+      return new Term((coefficient * t.coefficient), (power + t.power));
    }
 
    /**
@@ -62,6 +64,19 @@ public class Term
    */
    public String toString()
    {
-      // TODO: your code here. Hints: beware if power is 0 or 1. For example: 5X^0 = 5 or 5X^1 = 5X
+      String result = "";
+      if(this.coefficient > 0){
+         result += "+";
+      }
+      if (this.power == 0)
+      {
+         result += Double.toString(this.coefficient);
+      } else if (this.power == 1)
+      {
+         result += this.coefficient + "X";
+      } else {
+         result += this.coefficient + "X^" + this.power;
+      }
+      return result;
    }
 }
