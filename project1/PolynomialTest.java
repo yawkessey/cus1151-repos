@@ -1,6 +1,6 @@
 
 /**
-   A class to to test the Polynomial class.
+   A class to test the Polynomial class.
 */
 public class PolynomialTest
 {
@@ -10,11 +10,11 @@ public class PolynomialTest
       p.add(new Polynomial(-1.0, 1));
       p.add(new Polynomial(9.0, 7));
       p.add(new Polynomial(5.0, 10));
+//
+//      Polynomial q = p.multiply(p);
+//      q.print();
 
-      Polynomial q = p.multiply(p);
-      q.print();
-
-     /**
+     /*
         for above example your output must be:
         100.0 + 20.0x + 1.0x^2 - 180.0x^7 - 18.0x^8 - 100.0x^10 - 10.0x^11 + 81.0x^14
         + 90.0x^17 + 25.0x^20
@@ -25,4 +25,4 @@ public class PolynomialTest
 
    }
    }
-}
+
