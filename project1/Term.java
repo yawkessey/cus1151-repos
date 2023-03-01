@@ -36,19 +36,23 @@ public class Term
    }
 
    /**
-      Multiplies two coefficient  together and returns the result
-      @param t the other term
-      @return this * t as a term
+    * Multiplies two coefficient  together and returns the result
+    * @param t the other term
+    * @return this * t as a term
+    * Time Complexity: O(1)
+    * Space Complexity: O(1)
    */
    public Term multiply(Term t)
    {
-      // TODO: Come back and check if you need to add power
+      // TODO: Come back and check if you need to addTerm power
       return new Term((coefficient * t.coefficient), (power + t.power));
    }
 
    /**
       Adds the term to this term if the powers are the same 
-      @param t the term to attempt to add
+      @param t the term to attempt to addTerm
+       * Time Complexity: O(1)
+       * Space Complexity: O(1)
    */
    public void addIfSamePower(Term t)
    {
@@ -61,21 +65,23 @@ public class Term
    /**
       Returns a string representation of the term with a ^ representing the exponent
       @return a string representation of a term
+       * Time Complexity: O(1)
+       * Space Complexity: O(1)
    */
    public String toString()
    {
       String result = "";
       if(this.coefficient > 0){
-         result += "+";
+         result += "+ ";
       }
       if (this.power == 0)
       {
          result += Double.toString(this.coefficient);
       } else if (this.power == 1)
       {
-         result += this.coefficient + "X";
+         result += this.coefficient + "x";
       } else {
-         result += this.coefficient + "X^" + this.power;
+         result += this.coefficient + "x^" + this.power;
       }
       return result;
    }
